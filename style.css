@@ -1,0 +1,129 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
+    text-align: center;
+    color: white;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header and Subheading */
+.birthday-header {
+    font-size: 4rem;
+    color: #fff;
+    margin-top: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
+    animation: glowing 1.5s ease-in-out infinite;
+}
+
+.subheading p {
+    font-size: 1.5rem;
+    color: #fdfd96;
+    margin-top: 20px;
+    animation: fadeInOut 5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 1); }
+    50% { text-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 1); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Fun Balloons Animation */
+.balloons {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon {
+    font-size: 4rem;
+    position: absolute;
+    animation: floatBalloon 6s ease-in-out infinite;
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px) scale(1.2); }
+    100% { transform: translateY(0); }
+}
+
+/* Confetti Button Styling */
+.confetti-btn {
+    font-size: 2rem;
+    padding: 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+.confetti-btn:hover {
+    background-color: #feb47b;
+    transform: scale(1.1);
+}
+
+/* Countdown Timer */
+.countdown {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f5a623;
+}
+
+/* Birthday Message Section */
+.birthday-message {
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.birthday-message h2 {
+    color: #fdfd96;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glowing 1.5s ease-in-out infinite;
+}
+
+.extra-message {
+    font-size: 1.5rem;
+    color: #ff6f61;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Confetti Effect (when clicked) */
+@keyframes sparkle {
+    0% { background-color: #ff7e5f; }
+    100% { background-color: #feb47b; }
+}
+
